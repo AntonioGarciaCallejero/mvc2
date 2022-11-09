@@ -29,9 +29,10 @@ class Product{
     }
 
     //devolver un producto en particular 
-    public function find($id)
+    public static function find($id)
     {
         //esto porque en el otro lado hemos empezado a contar en el 1
+        //a ese id que nos solicita le resto 1 para que acceda a la posicion correcta del array
         return Product::PRODUCTS[$id-1];
     }
 
