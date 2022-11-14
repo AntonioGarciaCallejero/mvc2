@@ -1,31 +1,18 @@
-<!-- la mayor parte del codigo va a ser html porque es una vista -->
-<!-- miniejercicio modificar home de manera que al lado de cada producto nos salga un enlace que
-nos lleve a ese producto en particular, es decir ak show -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Inventario de Productos</h1>
-    <table>
-        <!-- mostrar todos los productos, miniejercicio
-        las variables en el ambito del metodo estan aqui -->
-        <?php foreach ($products as $item):?>
-        <tr>
-            <!-- el igual era lo mismo que php echo -->
-            <td>Identificador: <?= $item[0] ?></td>
-            <td>Descripcion:   <?= $item[1] ?></td>
-            <!-- <a href="http://mvc.local/?method=show&&id=<?= $item[0] ?>"></a> -->
-            <!-- parametro del metodo -->
-            <td><a href="?method=show&&id=<?= $item[0] ?>">Ver detalle</a></td>
-        </tr>
-        <!-- cierro la llave del foreach aqui -->
-        <?php endforeach; ?>
-        <!-- envezde abrir llaves se ponen dos puntos y endforeach con puntocoma, para mas claro -->
-        <!-- sustituir por 2 puntos y endnombre de la funcion bucle punto coma -->
-    </table>
-</body>
-</html>
+<?php require __DIR__ . "/head.php" ?>
+
+  <body>
+    <?php require __DIR__ . "/header.php" ?>
+   
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">Sticky footer with fixed navbar</h1>
+      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+      <p>Back to <a href="../sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+    </main>
+    <!--  -->
+    <?php require __DIR__ . "/footer.php" ?>
+
+    

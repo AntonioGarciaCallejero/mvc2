@@ -17,6 +17,7 @@ class Controller
     //en la que va a mostrar todos los productos que haya
     //llama a vista de inventario
 
+    //
     public function home(){
         //dos puntos para acceder a cosas estaticas
         //array de arrays
@@ -41,4 +42,6 @@ class Controller
         //para acceder a constantes y a metodos o variables estaticas
         require "views/show.php";
     }
+
+    
 }//fin_clase

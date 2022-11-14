@@ -4,7 +4,7 @@
     //star php no esta en public
     require "../start.php";
 
-    // //esto es para pronar
+    // //esto es para probar
     // require "../Controller.php";
     // $controller = new Controller();
     
