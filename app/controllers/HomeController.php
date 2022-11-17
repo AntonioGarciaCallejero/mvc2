@@ -1,6 +1,8 @@
 <?php
+    namespace App\Controllers;
 // el controlador especifico
 //un controlador para cada mierda en vez de uno solo para todas que es el que hemos deprecateado
+//app cargara un controlador y en el controlador estaran los metodos
 class HomeController
 {   
     //en home y login ya no voy a cargar productos, mostrare una vista diferente
@@ -19,6 +21,15 @@ class HomeController
         echo "<br>Dentro index de HOMECONTROLLER";
         //metodo home de Controller de mvc00
         //habria que modificarlos
+        //el require lanza un error al no funcionar y nos viene bien saberlo
+        //porque esto es asi, no entiendo como funciona esta ruta, preguntar
+        //imagino que porque segun la traza de la ejecucion y las llamadas estaremos en otro sitio
+        // require "../views/home.php"; asi estaba antes cuando las views estaban en otro lado
+        //cambiar la ruta de las views en los metodos
+        //funciona, entonces estoy o en index o en app?
+        require "../app/views/home.php";
+
+
     }
 
     function show(){

@@ -1,5 +1,5 @@
 <?php
-
+    namespace Core;
 class  App{
     //poner que cierran los cierres de llaves
 
@@ -53,6 +53,10 @@ class  App{
         //le pongo ruta para que no me lo cree dentro de core
         //este app esta incrustado en el start y el start esta al mismo nivel que el app
         // nos faltaba el ../, meter var dumps dentro de los bucles a ver si los coge
+
+        //tendria que cambiar aqui algo para que coja los controladores con el namespace
+        //pero nose muy bien el que
+
         $file = "../app/controllers/$controllerName" . ".php";
         //ahora tengo que verificcar que eso fichero existe
         if(file_exists($file)){
