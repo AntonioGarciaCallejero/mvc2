@@ -38,10 +38,16 @@
 //     }
 
 //recurso/accion/parametro asi va a ser mi url o lo que es lo mismo controlador metodo parametro
+
+    // require_once "core/App.php";
+    //creo que cambiaba esto
+    //ver si funciona asi, que mas hay que cambiar
+    //quitar los namespaces
+    //asi desde index, desde start sin el ..
+    // require_once "..core/App.php";
     require_once "core/App.php";
 
     $app = new App();
-
 
 
 

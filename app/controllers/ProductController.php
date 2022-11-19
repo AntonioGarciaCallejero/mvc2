@@ -1,5 +1,7 @@
 <?php
-    namespace App\Controllers;
+
+ 
+    
 // el controlador especifico
 //porque esto es asi, no me cuadra la ruta
 //creo que esto es asi porquue aqui venimos de App.php, que carga este controlador

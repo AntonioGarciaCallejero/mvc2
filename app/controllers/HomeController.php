@@ -1,5 +1,6 @@
 <?php
-    namespace App\Controllers;
+//  namespace App\Controllers; esto lo jodia todo noseporque
+     
 // el controlador especifico
 //un controlador para cada mierda en vez de uno solo para todas que es el que hemos deprecateado
 //app cargara un controlador y en el controlador estaran los metodos

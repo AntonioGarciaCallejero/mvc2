@@ -1,6 +1,11 @@
 <?php
-    namespace Core;
+    
+
+    
+
 class  App{
+
+      
     //poner que cierran los cierres de llaves
 
 
@@ -57,7 +62,7 @@ class  App{
         //tendria que cambiar aqui algo para que coja los controladores con el namespace
         //pero nose muy bien el que
 
-        $file = "../app/controllers/$controllerName" . ".php";
+        $file = "../app/controllers/$controllerName.php";
         //ahora tengo que verificcar que eso fichero existe
         if(file_exists($file)){
             //si existe lo cargo
@@ -67,11 +72,12 @@ class  App{
             http_response_code(404);
             die("No encontrado");
         }
-
-        //esta es la clase mas dificil repasar asaco esto
+    
+    
+                //esta es la clase mas dificil repasar asaco esto
         //existe el metodo en el controlador?
         //como el constructor es vacio puede ir con parentesis o sin parentesis
-        $controllerObject = new $controllerName(); //objeto de la clase que contiene esa variable
+        $controllerObject = new $controllerName; //objeto de la clase que contiene esa variable
         //lo mismo que si pongo new ProductController no se si esto es con mayuscula o si mayuscula
         if(method_exists($controllerObject, $method)) {
             //si el metodo existe tengo que llamarlo
@@ -86,9 +92,6 @@ class  App{
         //repasar esto un monton y la estructura entenderlo
         //parte la url y hace cosas con los pedazos
         
-
-
-
 
 
     }
