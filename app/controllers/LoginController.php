@@ -1,5 +1,5 @@
 <?php
-    
+    namespace App\Controllers;
 // el controlador especifico
 class LoginController
 {

@@ -6,7 +6,7 @@ use const Config\DSN;
 use const Config\USER;
 use const Config\PASSWORD;
 
-//necesario para referirnos a ella
+//necesario para referirnos a ella(ponerlo donde haga falta)
 use PDO;
 /**
 *

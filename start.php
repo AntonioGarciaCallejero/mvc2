@@ -47,7 +47,10 @@
     // require_once "..core/App.php";
     require_once "core/App.php";
 
-    $app = new App();
+    
+    //en este caso daria igual con que sin la rpimera contrbarra porque estamos en la raiz ya (ruta relativa)
+    //ante la duda usar rutas relativas
+    $app = new \Core\App();
 
 
 

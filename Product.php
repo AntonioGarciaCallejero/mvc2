@@ -22,6 +22,7 @@ class Product{
     //escribir fun
     //tabular
     //devuelve todos
+    //cuando ejecutas all() te devuelve el array de la constante productos
     public static  function all()
     {
         //acceder a una constante de clase
@@ -31,9 +32,10 @@ class Product{
     //devolver un producto en particular 
     public static function find($id)
     {
-        //esto porque en el otro lado hemos empezado a contar en el 1
+        //esto porque en el otro lado hemos empezado a contar en el 1 (con las ids de los productos)
         //a ese id que nos solicita le resto 1 para que acceda a la posicion correcta del array
         return Product::PRODUCTS[$id-1];
+        //devuelve la posicion del array, el producto que asu vez es un array
     }
 
 }//fin clase

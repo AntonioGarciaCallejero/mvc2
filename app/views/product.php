@@ -16,8 +16,10 @@ nos lleve a ese producto en particular, es decir ak show -->
         <?php foreach ($products as $item):?>
         <tr>
             <!-- el igual era lo mismo que php echo -->
+            <!-- es un array de arrays, de cada elemento el 0 es el id y el 1 es la descripcion -->
             <td>Identificador: <?= $item[0] ?></td>
             <td>Descripcion:   <?= $item[1] ?></td>
+            <!-- creo que esto era antes cuando teniamos un unico controlador y no habia que elegirlo -->
             <!-- <a href="http://mvc.local/?method=show&&id=<?= $item[0] ?>"></a> -->
             <!-- parametro del metodo -->
             <!-- pone show delante de la interrogacion y le funciona, no se porque -->
@@ -28,6 +30,8 @@ nos lleve a ese producto en particular, es decir ak show -->
             <!-- ver teoria ejemplos a ver si arroja mas luz sobre esto -->
             <!-- mirar la teoria de esto, le va  poner la mayuscular con una mierda que hemos hecho
         cuiado al cambiar cosas -->
+        <!-- o lo que es lo mismo(parecido) que lo que esta comentado: -->
+        <!-- cargamos el controlador product con el metodo show con el id como parametro -->
             <td><a href="product/show?id=<?= $item[0] ?>">Ver detalle</a></td>
         </tr>
         <!-- cierro la llave del foreach aqui -->

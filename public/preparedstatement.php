@@ -40,7 +40,7 @@ try {
     
     $nombre = "Alicia";
     $clave1 = "Sombrero";
-    //bindparam lo asocio dcon dospuntos nombrer
+    //bindparam lo asocio dcon dospuntos nombre
     $sentencia->bindParam(1,$nombre);
     $sentencia->bindParam(2,$clave1); //no tiene porque corresponder el nombre de la variable con la variable dinamica
 //el 1 es el primero interrogante, el dos el segundo
@@ -54,7 +54,7 @@ try {
     // $sentencia->bindValue(":nombre",$nombre);
     // $sentencia->bindValue(":clave",$clave1);
     //bindValue parecido a bindParam pero se queda con el valor, no es un apuntador, aunque lo redefina le da igual
-    //consultas que se van a usar muchas veces bindParam
+    //consultas que se van a usar muchas veces bindParam(por ejemplo un bucle)
     //pocas veces bindValue
 
     //es un apuntador a la variable el bindparam si las sobrescribo va a coger las ultimas

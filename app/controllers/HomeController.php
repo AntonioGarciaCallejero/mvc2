@@ -1,5 +1,7 @@
 <?php
-//  namespace App\Controllers; esto lo jodia todo noseporque
+ namespace App\Controllers; 
+ //esto lo jodia todo noseporque
+ //los require no se quitan
      
 // el controlador especifico
 //un controlador para cada mierda en vez de uno solo para todas que es el que hemos deprecateado
@@ -28,6 +30,8 @@ class HomeController
         // require "../views/home.php"; asi estaba antes cuando las views estaban en otro lado
         //cambiar la ruta de las views en los metodos
         //funciona, entonces estoy o en index o en app?
+        //en controllers no estas, porque te sales fuera y seleccionas app
+        
         require "../app/views/home.php";
 
 

@@ -1,7 +1,7 @@
 <?php
-    
+    namespace Core;
 
-    
+    //no poner comentarios antes del namespace
 
 class  App{
 
@@ -29,6 +29,7 @@ class  App{
         //quede asi
         // product: recurso; show: accion; 5: parametro
         //explode para separarlos, trocea una cadena en subcadenas mediante un caracter separador
+        //controlador, metodo, parametro
         // /product/show/5 -> product: recurso; show: accion; 5: parametro
         //parte por el cararter pero el caracter lo mantiene
         //con trim lo quita de delante y detras
@@ -63,7 +64,7 @@ class  App{
         //pero nose muy bien el que
 
         $file = "../app/controllers/$controllerName.php";
-        //ahora tengo que verificcar que eso fichero existe
+        //ahora tengo que verificcar que ese fichero existe
         if(file_exists($file)){
             //si existe lo cargo
             require_once $file; //importo el fichero si existe
@@ -72,15 +73,21 @@ class  App{
             http_response_code(404);
             die("No encontrado");
         }
-    
+
+        //homecontroller esta dentro de un namespace asi que haroa tengo que ponerlo asi
+        //hay que hacerlo asi o no te deja
+        //no te deja poner ruta namespace detras del new
+        $controllerName = "\\App\\Controllers\\$controllerName";
+        // echo $controllerName;
     
                 //esta es la clase mas dificil repasar asaco esto
         //existe el metodo en el controlador?
         //como el constructor es vacio puede ir con parentesis o sin parentesis
-        $controllerObject = new $controllerName; //objeto de la clase que contiene esa variable
+        $controllerObject = new  $controllerName; //objeto de la clase que contiene esa variable
         //lo mismo que si pongo new ProductController no se si esto es con mayuscula o si mayuscula
+        //compruebo si el metodo existe en el controlador
         if(method_exists($controllerObject, $method)) {
-            //si el metodo existe tengo que llamarlo
+            //si el metodo existe tengo que llamarlo con los parametros si los hubiera
             $controllerObject->$method($arguments);  //metodo ok-> lo invoco 
                         //si es vacio lo llamara sin argumentos
         }

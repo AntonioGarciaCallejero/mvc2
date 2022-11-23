@@ -13,6 +13,7 @@ el id ya esta recodigo en $product-->
     <h1>Detalle de producto</h1>
     <!-- solo un producto, no todo el array
     una lista ordenada con el identificador  -->
+    <!-- una vista que te muestra las mierdas de lo que te ha devuelto el metodo clase en el controlador -->
     <li>
         <strong>Identificador:</strong>
         <?= $product[0] ?>
