@@ -1,4 +1,6 @@
 <?php
+
+use \Core\App;
 // //start llama al controlador y le pasa el metodo apropiado
 // //ver apuntes dibujito
 //     //nexo de union entre el cliente y el controlador
@@ -45,12 +47,16 @@
     //quitar los namespaces
     //asi desde index, desde start sin el ..
     // require_once "..core/App.php";
-    require_once "core/App.php";
+    // require_once "core/App.php";
+    require 'vendor/autoload.php';
+    //me va a ahorrar todos los includes y requires de clases (de vistas no)
 
     
     //en este caso daria igual con que sin la rpimera contrbarra porque estamos en la raiz ya (ruta relativa)
     //ante la duda usar rutas relativas
-    $app = new \Core\App();
+    //hemos cambiado esto
+    // $app = new \Core\App();
+    $app = new App();
 
 
 

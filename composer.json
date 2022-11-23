@@ -1,0 +1,22 @@
+{
+    "name": "alumno/mvc",
+    "authors": [
+        {
+            "name": "Antonio",
+            "email": "antoniogarciacalleycamino@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    },
+
+    "autoload": {
+        "psr-4":{
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/"
+        }
+    }
+
+
+}

@@ -2,6 +2,7 @@
     namespace App\Controllers;
     //o le pones el namespace cada vez que lo uses o lo pones aqui asi una vez
     use App\Models\Product;
+    use Dompdf\Dompdf;
  
     
 // el controlador especifico
@@ -14,7 +15,9 @@
 //¿porque me falla esto?
 //porque esto es asi si hasta el propio visualstudio me lo dice otr manera?
 //un nivel por encima de lo que dictaria la logica, al parecer
-require_once "../app/models/Product.php";
+//esto es asi porque todos los requires son desde el public
+//ahora podira quitarlos en teoria, con la mierda esa
+// require_once "../app/models/Product.php";
 
 
 //a pesar de los namespaces hay que requerirlo, y ahora esta en otro sitio, ¿puede ser eso?
@@ -45,8 +48,25 @@ class ProductController
         //si confundimos el home con el controller de home podemos renombrarlo a product
     }
 
+    //esto importa poco al parecer
+    function pdf(){
+        
+    
+    
+    $dompdf = new Dompdf();
+    $dompdf->loadHtml('<h1>Hola mundo</h1><br><a href="https://parzibyte.me/blog">By Parzibyte</a>');
+    $dompdf->render();
+    header("Content-type: application/pdf");
+    header("Content-Disposition: inline; filename=documento.pdf");
+    $dompdf->render();
+    $dompdf->stream();
+    }
+
     //un controlador no tiene sacar echos, tiene que invocar a las vistas
     //y que muestren ellas cosas
+
+
+
     function show(){
         //lo de args¿?
         // echo "<br>Dentro de show de PRODUCTCONTROLLER";

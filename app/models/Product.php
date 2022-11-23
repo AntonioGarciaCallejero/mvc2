@@ -55,6 +55,8 @@ class Product extends Model{
         //y ahora con la sentencia preparada
         //me va a meter en products un array de objetos
         //daba error de la otra forma, de esta no ¿porque? nolose
+        // echo Product::class;
+        // exit();
         $products = $sentencia->fetchAll(PDO::FETCH_CLASS, Product::class);
         return $products;
     }
